@@ -286,12 +286,12 @@ body.is-open .hero__card {
 .blessing {
   margin: 0;
   text-align: center;
-  font-family: var(--serif);
+  font-family: "Abhaya Libre", "Iskoola Pota", "Nirmala UI", var(--serif);
   font-weight: 700;
   color: var(--maroon);
-  font-size: clamp(1.15rem, 4vw, 1.7rem);
-  letter-spacing: 0.05em;
-  line-height: 1.15;
+  font-size: clamp(1.25rem, 4.2vw, 1.85rem);
+  letter-spacing: 0.04em;
+  line-height: 1.35;
 }
 
 .invite-line {
