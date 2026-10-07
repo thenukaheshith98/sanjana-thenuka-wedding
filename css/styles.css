@@ -830,6 +830,7 @@ body.is-open .hero__card {
 .rsvp__field input[type="text"],
 .rsvp__field input[type="tel"],
 .rsvp__field input[type="number"],
+.rsvp__field select,
 .rsvp__field textarea {
   width: 100%;
   padding: 0.75rem 0.9rem;
@@ -845,12 +846,24 @@ body.is-open .hero__card {
 
 .rsvp__field textarea { resize: vertical; min-height: 6.5rem; }
 
+.rsvp__field select {
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, #8e7427 50%),
+    linear-gradient(135deg, #8e7427 50%, transparent 50%);
+  background-position: calc(100% - 18px) calc(50% - 3px), calc(100% - 12px) calc(50% - 3px);
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+  padding-right: 2.2rem;
+}
+
 .rsvp__field input:hover,
+.rsvp__field select:hover,
 .rsvp__field textarea:hover {
   border-color: var(--gold-mid);
 }
 
 .rsvp__field input:focus,
+.rsvp__field select:focus,
 .rsvp__field textarea:focus {
   outline: none;
   border-color: var(--maroon-mid);
@@ -858,9 +871,14 @@ body.is-open .hero__card {
 }
 
 .rsvp__field input:disabled,
+.rsvp__field select:disabled,
 .rsvp__field textarea:disabled {
   opacity: 0.55;
   cursor: not-allowed;
+}
+
+.rsvp__field textarea::placeholder {
+  color: rgba(124, 106, 72, 0.7);
 }
 
 .rsvp__pills {

@@ -257,19 +257,20 @@
                   <input type="checkbox" name="events" value="Wedding Reception" />
                   <span>Wedding Reception</span>
                 </label>
-                <label class="rsvp__check">
-                  <input type="checkbox" name="events" value="Homecoming" />
-                  <span>Homecoming</span>
-                </label>
               </div>
             </fieldset>
             <label class="rsvp__field">
               <span>Meal preference</span>
-              <input type="text" name="meal" maxlength="80" placeholder="Vegetarian, non-vegetarian, or other" />
+              <select name="meal">
+                <option value="" selected>Select</option>
+                <option value="Vegetarian">Vegetarian</option>
+                <option value="Non-vegetarian">Non-vegetarian</option>
+                <option value="No preference">No preference</option>
+              </select>
             </label>
             <label class="rsvp__field">
               <span>A note for us</span>
-              <textarea name="note" rows="4" maxlength="500"></textarea>
+              <textarea name="note" rows="4" maxlength="500" placeholder="Note....."></textarea>
             </label>
             <p class="rsvp__error" data-rsvp-error hidden></p>
             <p class="rsvp__success" data-rsvp-success hidden>Thank you — your RSVP is ready to send.</p>
