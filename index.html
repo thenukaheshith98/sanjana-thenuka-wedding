@@ -16,7 +16,7 @@
       rel="stylesheet"
     />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%235C140F'/%3E%3Ccircle cx='32' cy='32' r='18' fill='none' stroke='%23D2B97A' stroke-width='2'/%3E%3Ccircle cx='24' cy='32' r='8' fill='none' stroke='%23E8D8A4' stroke-width='1.6'/%3E%3Ccircle cx='40' cy='32' r='8' fill='none' stroke='%23E8D8A4' stroke-width='1.6'/%3E%3C/svg%3E" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/styles.css?v=9" />
   </head>
   <body>
     <div class="backdrop" aria-hidden="true"></div>
@@ -226,8 +226,9 @@
               <input type="tel" name="mobile" autocomplete="tel" maxlength="20" inputmode="tel" />
             </label>
             <fieldset class="rsvp__field">
-              <legend>Will you attend?</legend>
-              <div class="rsvp__pills" role="radiogroup" aria-required="true">
+              <legend class="sr-only">Will you attend?</legend>
+              <span id="rsvp-attend-label">Will you attend?</span>
+              <div class="rsvp__pills" role="radiogroup" aria-labelledby="rsvp-attend-label" aria-required="true">
                 <label class="rsvp__pill">
                   <input type="radio" name="attend" value="Yes" required />
                   <span>Yes</span>
@@ -247,7 +248,8 @@
               <input type="number" name="party" min="1" max="20" step="1" value="1" required />
             </label>
             <fieldset class="rsvp__field">
-              <legend>Events you will join</legend>
+              <legend class="sr-only">Events you will join</legend>
+              <span>Events you will join</span>
               <div class="rsvp__checks">
                 <label class="rsvp__check">
                   <input type="checkbox" name="events" value="Poruwa Ceremony" />
@@ -447,6 +449,6 @@
       </div>
     </div>
 
-    <script src="js/app.js"></script>
+    <script src="js/app.js?v=9"></script>
   </body>
 </html>
