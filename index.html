@@ -207,6 +207,78 @@
           </article>
         </div>
 
+        <div class="rsvp card" id="rsvp">
+          <div class="section-head rsvp__head">
+            <span class="kicker">Kindly reply</span>
+            <h2 class="section-title">RSVP</h2>
+            <span class="ornament" aria-hidden="true">
+              <span class="line"></span><span class="diamond"></span><span class="line"></span>
+            </span>
+            <p class="rsvp__deadline">Please respond by 15<sup>th</sup> November 2026</p>
+          </div>
+          <form class="rsvp__form" data-rsvp-form novalidate>
+            <label class="rsvp__field">
+              <span>Your name</span>
+              <input type="text" name="name" autocomplete="name" maxlength="80" required />
+            </label>
+            <label class="rsvp__field">
+              <span>Mobile <em>(optional)</em></span>
+              <input type="tel" name="mobile" autocomplete="tel" maxlength="20" inputmode="tel" />
+            </label>
+            <fieldset class="rsvp__field">
+              <legend>Will you attend?</legend>
+              <div class="rsvp__pills" role="radiogroup" aria-required="true">
+                <label class="rsvp__pill">
+                  <input type="radio" name="attend" value="Yes" required />
+                  <span>Yes</span>
+                </label>
+                <label class="rsvp__pill">
+                  <input type="radio" name="attend" value="No" />
+                  <span>No</span>
+                </label>
+                <label class="rsvp__pill">
+                  <input type="radio" name="attend" value="Maybe" />
+                  <span>Maybe</span>
+                </label>
+              </div>
+            </fieldset>
+            <label class="rsvp__field">
+              <span>Number in your party</span>
+              <input type="number" name="party" min="1" max="20" step="1" value="1" required />
+            </label>
+            <fieldset class="rsvp__field">
+              <legend>Events you will join</legend>
+              <div class="rsvp__checks">
+                <label class="rsvp__check">
+                  <input type="checkbox" name="events" value="Poruwa Ceremony" />
+                  <span>Poruwa Ceremony</span>
+                </label>
+                <label class="rsvp__check">
+                  <input type="checkbox" name="events" value="Wedding Reception" />
+                  <span>Wedding Reception</span>
+                </label>
+                <label class="rsvp__check">
+                  <input type="checkbox" name="events" value="Homecoming" />
+                  <span>Homecoming</span>
+                </label>
+              </div>
+            </fieldset>
+            <label class="rsvp__field">
+              <span>Meal preference</span>
+              <input type="text" name="meal" maxlength="80" placeholder="Vegetarian, non-vegetarian, or other" />
+            </label>
+            <label class="rsvp__field">
+              <span>A note for us</span>
+              <textarea name="note" rows="4" maxlength="500"></textarea>
+            </label>
+            <p class="rsvp__error" data-rsvp-error hidden></p>
+            <p class="rsvp__success" data-rsvp-success hidden>Thank you — your RSVP is ready to send.</p>
+            <button type="submit" class="rsvp__submit" data-rsvp-submit>
+              <span data-rsvp-submit-label>Send RSVP</span>
+            </button>
+          </form>
+        </div>
+
         <div class="calendar" data-calendar>
           <button
             type="button"
@@ -321,6 +393,12 @@
           <a href="#events" aria-label="Events" title="Events">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>
             <span class="sr-only">Events</span>
+          </a>
+        </li>
+        <li>
+          <a href="#rsvp" aria-label="RSVP" title="RSVP">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg>
+            <span class="sr-only">RSVP</span>
           </a>
         </li>
         <li>
